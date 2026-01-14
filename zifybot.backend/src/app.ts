@@ -52,4 +52,10 @@ app.use('/api/auth', authRoutes);
 import adminRoutes from './routes/admin.routes';
 app.use('/api/admin', adminRoutes);
 
+// Telnyx routes (AI calling agent)
+import telnyxRoutes from './routes/telnyx.routes';
+app.use('/api/telnyx', telnyxRoutes);
+// Webhook endpoint (no /api/telnyx prefix for webhook)
+app.use('/api/webhook', telnyxRoutes);
+
 export default app

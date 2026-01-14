@@ -38,5 +38,8 @@
     "dashboard"
   ],
   "author": "ZifyBot Team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "telnyx": "^5.0.0"
+  }
 }

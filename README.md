@@ -40,6 +40,13 @@ cd zifybot.backend && npm install
    MONGODB_URL_DEVELOPMENT=your_mongodb_connection_string
    ACCESS_TOKEN_SECRET=your_access_token_secret
    REFRESH_TOKEN_SECRET=your_refresh_token_secret
+   
+   # Telnyx Configuration (for AI calling agent)
+   TELNYX_API_KEY=your_telnyx_api_key
+   TELNYX_CONNECTION_ID=your_telnyx_connection_id
+   TELNYX_PHONE_NUMBER=+1XXXXXXXXXX
+   TELNYX_WEBHOOK_URL=https://your-ngrok-url.ngrok-free.app/api/webhook/aiagent
+   AI_ASSISTANT_ID=your_ai_assistant_id
    ```
 
 2. **Frontend Environment** (`zifybot.frontend/.env.local`):
