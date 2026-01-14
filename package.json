@@ -1,0 +1,42 @@
+{
+  "name": "zifybot",
+  "version": "1.0.0",
+  "description": "ZifyBot - User Management Platform with Admin Approval System",
+  "private": true,
+  "workspaces": [
+    "zifybot.frontend",
+    "zifybot.backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd zifybot.frontend && npm run dev",
+    "dev:backend": "cd zifybot.backend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd zifybot.frontend && npm run build",
+    "build:backend": "cd zifybot.backend && npm run build",
+    "start": "concurrently -n \"backend,frontend\" -c \"cyan,magenta\" \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd zifybot.frontend && npm run start",
+    "start:backend": "cd zifybot.backend && npm run start",
+    "install:all": "npm install && cd zifybot.frontend && npm install && cd ../zifybot.backend && npm install",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd zifybot.frontend && npm run lint",
+    "lint:backend": "cd zifybot.backend && npm run lint",
+    "format": "cd zifybot.backend && npm run format"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "zifybot",
+    "user-management",
+    "authentication",
+    "admin-panel",
+    "dashboard"
+  ],
+  "author": "ZifyBot Team",
+  "license": "ISC"
+}
